@@ -22,3 +22,15 @@ project "yaml-cpp"
         "src/**.c",
         "src/**.cpp",
     }
+    
+    filter "configurations:Debug"
+        runtime "Debug"
+        symbols "on"
+
+    filter "configurations:Development"
+        runtime "Debug"
+        symbols "on"
+
+    filter "configurations:Release"
+        runtime "Release"
+        symbols "off"
